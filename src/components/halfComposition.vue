@@ -20,6 +20,6 @@
 
 <template>
     <h2>This uses half Composition API</h2>
+    <p>{{ rf }}</p>
     <p>{{ react }}</p>
-    <p>{{ react.age }}</p>
 </template>
