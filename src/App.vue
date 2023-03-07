@@ -1,4 +1,5 @@
 <script>
+    import { Suspense } from 'vue';
     import HomePage from './components/home.vue';
     import CompositionPage from './components/composition.vue';
     import OptionPage from './components/option.vue';
@@ -40,10 +41,12 @@
     <button @click="showOptionPage">Switch To Option Page</button><br>
     <button @click="showCompositionPage">Switch To Full Composition</button><br>
     <button @click="showHalf">Switch To Half Composition</button>
-    <Suspense>
+    <Suspense timeout="0">
         <!-- <HomePage v-if="currentPage == 'Home'" />
         <UserPage v-else /> -->
+        <template #default>
         <component :is="renderPage" />
-        <template v-slot:fallback><p>Please wait...</p></template>
+        </template>
+        <template #fallback><p>Please wait...</p></template>
     </Suspense>
 </template>
