@@ -45,7 +45,7 @@
         <!-- <HomePage v-if="currentPage == 'Home'" />
         <UserPage v-else /> -->
         <template #default>
-        <component :is="renderPage" />
+        <component :is="renderPage" timeToWait=1000 />
         </template>
         <template #fallback><p>Please wait...</p></template>
     </Suspense>

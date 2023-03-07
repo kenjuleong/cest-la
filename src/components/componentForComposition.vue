@@ -1,0 +1,1 @@
+<template><span style="color:cyan">This is a small component made for composition that can be imported directly</span></template>
