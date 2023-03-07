@@ -1,10 +1,14 @@
 <script>
     import HomePage from './components/home.vue';
-    import UserPage from './components/user.vue';
+    import CompositionPage from './components/composition.vue';
+    import OptionPage from './components/option.vue';
+    import HalfPage from './components/halfComposition.vue';
     export default {
         components: {
             HomePage,
-            UserPage
+            CompositionPage,
+            OptionPage,
+            HalfPage
         },
         data: () => ({
             currentPage: "Home"
@@ -18,16 +22,24 @@
             showHomePage() {
                 this.currentPage = "Home";
             },
-            showUserPage() {
-                this.currentPage = "User";
+            showOptionPage() {
+                this.currentPage = "Option";
+            },
+            showHalf() {
+                this.currentPage = "Half"
+            },
+            showCompositionPage() {
+                this.currentPage = "Composition";
             }
         }
     }
 </script>
 
 <template>
-    <button @click="showHomePage">Home</button>
-    <button @click="showUserPage">Switch To User</button>
+    <button @click="showHomePage">Home</button><br>
+    <button @click="showOptionPage">Switch To Option Page</button><br>
+    <button @click="showCompositionPage">Switch To Full Composition</button><br>
+    <button @click="showHalf">Switch To Half Composition</button>
     <Suspense>
         <!-- <HomePage v-if="currentPage == 'Home'" />
         <UserPage v-else /> -->

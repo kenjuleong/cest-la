@@ -8,6 +8,6 @@
         data.message = await wait(3000, "This page was loaded after 3 seconds");
 </script>
 <template>
-<h2>This uses composition API</h2>
+<h2>This uses full composition API</h2>
     <p>{{ data.message }}</p>
 </template>
