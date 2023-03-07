@@ -1,47 +1,37 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+    import HomePage from './components/home.vue';
+    import UserPage from './components/user.vue';
+    export default {
+        components: {
+            HomePage,
+            UserPage
+        },
+        data: () => ({
+            currentPage: "Home"
+        }),
+        computed: {
+            renderPage() {
+                return this.currentPage + "Page"
+            }
+        },
+        methods: {
+            showHomePage() {
+                this.currentPage = "Home";
+            },
+            showUserPage() {
+                this.currentPage = "User";
+            }
+        }
+    }
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <button @click="showHomePage">Home</button>
+    <button @click="showUserPage">Switch To User</button>
+    <Suspense>
+        <!-- <HomePage v-if="currentPage == 'Home'" />
+        <UserPage v-else /> -->
+        <component :is="renderPage" />
+        <template v-slot:fallback><p>Please wait...</p></template>
+    </Suspense>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
