@@ -6,6 +6,7 @@
     import HalfPage from './components/halfComposition.vue';
     import ScopedCSSPage from './components/scopedCSS.vue';
     import UnScopedCSSPage from './components/noScopedCSS.vue';
+    import CSSBindingPage from './components/cssBinding.vue';
     export default {
         components: {
             HomePage,
@@ -13,7 +14,8 @@
             OptionPage,
             HalfPage,
             ScopedCSSPage,
-            UnScopedCSSPage
+            UnScopedCSSPage,
+            CSSBindingPage
         },
         data: () => ({
             currentPage: "Home"
@@ -42,6 +44,9 @@
             showNoScopedCSS() {
                 this.currentPage = "UnScopedCSS"
             },
+            showCSSBinding() {
+                this.currentPage = "CSSBinding";
+            }
         }
     }
 </script>
@@ -52,7 +57,9 @@
     <button @click="showCompositionPage">Switch To Full Composition</button><br>
     <button @click="showHalf">Switch To Half Composition</button><br>
     <button @click="showScopedCSS">Switch To Scoped CSS</button><br>
-    <button @click="showNoScopedCSS">Switch To UnScoped CSS</button>
+    <button @click="showNoScopedCSS">Switch To UnScoped CSS</button><br>
+    <button @click="showCSSBinding">Switch To CSS Binding</button>
+
     <Suspense timeout="0">
         <!-- <HomePage v-if="currentPage == 'Home'" />
         <UserPage v-else /> -->
