@@ -59,7 +59,7 @@ export default {
 
 > Scoped CSS
 This css only applies to the specific component
-```
+```vue
 <template>
 <h1>Hello</h1>
 </template>
