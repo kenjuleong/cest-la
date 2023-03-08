@@ -56,3 +56,17 @@ export default {
 }
 </script>
 ```
+
+> Scoped CSS
+This css only applies to the specific component
+```
+<template>
+<h1>Hello</h1>
+</template>
+
+<style scoped>
+h1 {
+color: red
+}
+</style>
+```
