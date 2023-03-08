@@ -58,6 +58,7 @@ export default {
 ```
 
 > Scoped CSS
+> 
 > This css only applies to the specific component
 ```vue
 <template>
@@ -72,6 +73,7 @@ color: red
 ```
 
 > CSS Binding
+> 
 > Bind a css value to a defined variable
 ```vue
 <script setup>
