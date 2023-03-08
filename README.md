@@ -58,7 +58,7 @@ export default {
 ```
 
 > Scoped CSS
-This css only applies to the specific component
+> This css only applies to the specific component
 ```vue
 <template>
 <h1>Hello</h1>
@@ -72,7 +72,7 @@ color: red
 ```
 
 > CSS Binding
-Bind a css value to a defined variable
+> Bind a css value to a defined variable
 ```vue
 <script setup>
     import { ref } from "vue";
