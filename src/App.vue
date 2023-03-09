@@ -1,12 +1,12 @@
 <script>
     import { Suspense } from 'vue';
-    import HomePage from './components/home.vue';
-    import CompositionPage from './components/composition.vue';
-    import OptionPage from './components/option.vue';
-    import HalfPage from './components/halfComposition.vue';
-    import ScopedCSSPage from './components/scopedCSS.vue';
-    import UnScopedCSSPage from './components/noScopedCSS.vue';
-    import CSSBindingPage from './components/cssBinding.vue';
+    import HomePage from '@/components/home.vue';
+    import CompositionPage from '@/components/composition.vue';
+    import OptionPage from '@/components/option.vue';
+    import HalfPage from '@/components/halfComposition.vue';
+    import ScopedCSSPage from '@/components/scopedCSS.vue';
+    import UnScopedCSSPage from '@/components/noScopedCSS.vue';
+    import CSSBindingPage from '@/components/cssBinding.vue';
     export default {
         components: {
             HomePage,
