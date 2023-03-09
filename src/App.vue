@@ -60,6 +60,7 @@
     <button @click="showNoScopedCSS">Switch To UnScoped CSS</button><br>
     <button @click="showCSSBinding">Switch To CSS Binding</button>
 
+    <router-view />
     <Suspense timeout="0">
         <!-- <HomePage v-if="currentPage == 'Home'" />
         <UserPage v-else /> -->
